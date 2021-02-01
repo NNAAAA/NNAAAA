@@ -32,11 +32,11 @@ function startgame(){
         }
     ]
     let stop=0;
-    for (let i=0;i<80;++i){
-        toadovatcan.push({
-            x:0,y:0
-        })
-    }
+    // for (let i=0;i<80;++i){
+    //     toadovatcan.push({
+    //         x:0,y:0
+    //     })
+    // }
     taovatcan(toadovatcan,body)
 
     //taovatthe
@@ -134,7 +134,15 @@ document.addEventListener("keydown",keycode=>{
             if (check_dichuyen!=2)
                 check_dichuyen=1;
             break;
+        case 87:  //len
+            if (check_dichuyen!=2)
+                check_dichuyen=1;
+            break;
         case 40:   //xuong
+            if (check_dichuyen!=1)
+                check_dichuyen=2;
+            break;
+        case 83:   //xuong
             if (check_dichuyen!=1)
                 check_dichuyen=2;
             break;
@@ -142,7 +150,15 @@ document.addEventListener("keydown",keycode=>{
             if (check_dichuyen!=4)
                 check_dichuyen=3;
             break;
+        case 68:  //phai
+            if (check_dichuyen!=4)
+                check_dichuyen=3;
+            break;
         case 37:  //trai
+            if (check_dichuyen!=3)
+                check_dichuyen=4;
+            break;
+        case 65:  //trai
             if (check_dichuyen!=3)
                 check_dichuyen=4;
             break;
