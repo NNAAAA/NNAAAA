@@ -61,6 +61,7 @@ function startgame(){
     taoran(toado,body)
     hinhanhran(toado)
 
+    //ctrl on mobile
     btnCtrl.forEach(item=>{
         item.addEventListener("click",(e)=>{
             if (e.target.id==="top"&&check_dichuyen!=2)
