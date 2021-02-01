@@ -3,15 +3,19 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    overflow: hidden;
 }
 #background{
-    width: 250px;
-    height: 250px;
     background-color: #C0C8CE; 
 
     position: relative;
 
     overflow-x: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #start,#end{
@@ -79,11 +83,18 @@ body{
     position: absolute;
 }
 
-#point{
-   display: flex; 
-   justify-content: flex-start;
+#footer{
+    display: flex;
+}
 
-   width: 500px;
+#point{
+    display: flex; 
+    justify-content: flex-start;
+
+    width: 100px;
+    left: 100%;
+    top:100%;
+
 }
 
 #max-point{
@@ -95,18 +106,24 @@ body{
 
 #present-point{
     width: 100px;
+    height: 60px;
     background-color: pink;
     text-align: center;
 }
 
 #present-point>p,#max-point>p{
-    margin-top: 0;
-    margin-bottom: 2px;
-    font-size: 30px;
+    font-size: 20px;
+    margin: 5px 0;
 }
 
-#present-point>h1,#max-point>h1{
-    margin: 0;
+#present-point>h3,#max-point>h3{
+    margin: 5px 0;
+}
+
+.wrapper{
+    position: absolute;
+    display: flex;
+    justify-content: center;
 }
 
 #controller{
@@ -114,6 +131,7 @@ body{
     height: 60px;
     background-color: black;
     position: relative;
+    
 }
 
 .btn-ctrl{
@@ -153,5 +171,4 @@ body{
     top: 20px;
     left: 20px;
 }
-
 

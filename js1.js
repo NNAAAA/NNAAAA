@@ -5,6 +5,15 @@ var dichuyen={
 var check_dichuyen=1;
 var point=0;
 var maxpoint=0;
+//setup khung hinh
+var screenOfuser=Math.floor(screen.width/100)*100
+document.getElementById('background').style.width=`${screenOfuser}px`
+document.getElementById('background').style.height=`${screenOfuser}px`
+document.getElementById('footer').setAttribute('style',`width:${screenOfuser}`)
+document.querySelector('.wrapper').style.width=`${screenOfuser}px`
+var rob=screenOfuser-10
+    
+console.log(screenOfuser)
 document.getElementById("start").addEventListener("click",startgame);
 document.getElementById("end").addEventListener("click",choilai);
 maxpoint=localStorage.getItem("maxpoint")
@@ -170,7 +179,7 @@ document.addEventListener("keydown",keycode=>{
 function taovatthe(toadovatthe,vatcan) {  
     toadovatthe.x=Math.round(Math.random()*100)*10;
     toadovatthe.y=Math.round(Math.random()*100)*10;
-    while (toadovatthe.x>490||toadovatthe.y>490){
+    while (toadovatthe.x>rob||toadovatthe.y>rob){
         toadovatthe.x=Math.round(Math.random()*100)*10;
         toadovatthe.y=Math.round(Math.random()*100)*10;
     }
@@ -202,7 +211,7 @@ function taoran(toado,body){
     body.appendChild(thanran)
     toado[0].x=Math.round(Math.random()*100)*10;
     toado[0].y=Math.round(Math.random()*100)*10;
-    while (toado[0].x>490||toado[0].y>490){
+    while (toado[0].x>rob||toado[0].y>rob){
         toado[0].x=Math.round(Math.random()*100)*10;
         toado[0].y=Math.round(Math.random()*100)*10;
     }
@@ -257,7 +266,7 @@ function taovatcan(toado,body){
     for (let i=0;i<toado.length;++i){
         toado[i].x=Math.round(Math.random()*100)*10;
         toado[i].y=Math.round(Math.random()*100)*10;
-        while (toado[i].x>490||toado[i].y>490){
+        while (toado[i].x>rob||toado[i].y>rob){
             toado[i].x=Math.round(Math.random()*100)*10;
             toado[i].y=Math.round(Math.random()*100)*10;
         }
@@ -290,7 +299,7 @@ function xuatdiem(a){
 function luudiemtoida(maxpoint,point){
     if (maxpoint<point)
         maxpoint=point
-    document.querySelector("#max-point p").innerHTML=maxpoint
-    localStorage.setItem("maxpoint",maxpoint)
+    //document.querySelector("#max-point p").innerHTML=maxpoint
+    //localStorage.setItem("maxpoint",maxpoint)
 }
 
