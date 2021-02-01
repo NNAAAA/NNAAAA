@@ -146,18 +146,22 @@ body{
     cursor: pointer;
 }
 #top{
-    left:20px;
+    left:50%;
+    transform: translateX(-50%);
 }
 #bot{
-    left:20px;
+    left:50%;
+    transform: translateX(-50%);
     bottom: 0;
 }
 #left{
-    top: 20px;
+    top:50%;
+    transform: translateY(-50%);
 }
 #right{
     right: 0;
-    top: 20px;
+    top:50%;
+    transform: translateY(-50%);
 }
 
 #pause{
