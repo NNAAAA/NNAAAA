@@ -72,6 +72,7 @@ function startgame(){
                 check_dichuyen=3
             if (e.target.id==="left"&&check_dichuyen!=3)
                 check_dichuyen=4
+            console.log(e.target)
         })
     })
 
