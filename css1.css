@@ -5,8 +5,8 @@ body{
     flex-direction: column;
 }
 #background{
-    width: 500px;
-    height: 500px;
+    width: 250px;
+    height: 250px;
     background-color: #C0C8CE; 
 
     position: relative;
