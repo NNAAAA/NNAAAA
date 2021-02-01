@@ -1,0 +1,110 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#background{
+    width: 500px;
+    height: 500px;
+    background-color: #C0C8CE; 
+
+    position: relative;
+
+    overflow-x: hidden;
+}
+
+#start,#end{
+    position:absolute;
+
+    background-color: white;
+    width: 100px;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px;
+
+    transition:0.6s;
+
+    border-radius: 20px;
+}
+
+
+#start:hover,#end:hover{
+    background-color: pink;
+
+    cursor: pointer;
+}
+
+#end{
+    display: none;
+}
+
+.ran{
+    width: 10px;
+    height: 10px;
+
+    background-color:  rgb(21, 202, 21);
+    position: absolute;
+
+    box-sizing: border-box;
+}
+#ran0{
+    background-color: black;
+
+    border-radius: 2px;
+}
+.vatthe{
+    width: 10px;
+    height: 10px;
+
+    background-color: rgb(55, 0, 255);
+    position: absolute;
+    animation:flicker 3s infinite
+}
+
+@keyframes flicker{
+    0%{opacity: 1;}
+    25%{opacity: 0.75;}
+    50%{opacity: 0.25;}
+    75%{opacity: 0.75;}
+    100%{opacity: 1;}
+}
+
+.vatcan{
+    width: 10px;
+    height: 10px;
+
+    background-color:red;
+    position: absolute;
+}
+
+#point{
+   display: flex; 
+   justify-content: flex-start;
+
+   width: 500px;
+}
+
+#max-point{
+    width: 100px;
+    background-color: pink;
+    text-align: center;
+}
+
+
+#present-point{
+    width: 100px;
+    background-color: pink;
+    text-align: center;
+}
+
+#present-point>p,#max-point>p{
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-size: 30px;
+}
+
+#present-point>h1,#max-point>h1{
+    margin: 0;
+}
