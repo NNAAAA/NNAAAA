@@ -108,3 +108,50 @@ body{
 #present-point>h1,#max-point>h1{
     margin: 0;
 }
+
+#controller{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    position: relative;
+}
+
+.btn-ctrl{
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#top{
+    left:20px;
+}
+#bot{
+    left:20px;
+    bottom: 0;
+}
+#left{
+    top: 20px;
+}
+#right{
+    right: 0;
+    top: 20px;
+}
+
+#pause{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+    top: 20px;
+    left: 20px;
+}
+
+
