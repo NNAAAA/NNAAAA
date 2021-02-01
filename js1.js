@@ -16,13 +16,7 @@ document.getElementById('background').style.width=`${screenOfuser}px`
 document.getElementById('background').style.height=`${screenOfuser}px`
 document.getElementById('footer').setAttribute('style',`width:${screenOfuser}`)
 document.querySelector('.wrapper').style.width=`${screenOfuser}px`
-document.getElementById('controller').style.width=`${btn*3}px`
-document.getElementById('controller').style.height=`${btn*3}px`
-var btnCtrl=document.querySelectorAll('.btn-ctrl')
-btnCtrl.forEach(item=>{
-    item.style.height=`80px`
-    item.style.width=`80px`
-})
+
 var rob=screenOfuser-10
     
 console.log(screenOfuser)
