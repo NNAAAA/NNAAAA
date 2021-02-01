@@ -16,10 +16,9 @@ document.getElementById('background').style.width=`${screenOfuser}px`
 document.getElementById('background').style.height=`${screenOfuser}px`
 document.getElementById('footer').setAttribute('style',`width:${screenOfuser}`)
 document.querySelector('.wrapper').style.width=`${screenOfuser}px`
-
+var btnCtrl=document.querySelectorAll(".btn-ctrl")
 var rob=screenOfuser-10
     
-console.log(screenOfuser)
 document.getElementById("start").addEventListener("click",startgame);
 document.getElementById("end").addEventListener("click",choilai);
 maxpoint=localStorage.getItem("maxpoint")
@@ -61,6 +60,19 @@ function startgame(){
     //taoran
     taoran(toado,body)
     hinhanhran(toado)
+
+    btnCtrl.forEach(item=>{
+        item.addEventListener("click",(e)=>{
+            if (e.target.id==="top"&&check_dichuyen!=2)
+                check_dichuyen=1
+            if (e.target.id==="bot"&&check_dichuyen!=1)
+                check_dichuyen=2
+            if (e.target.id==="right"&&check_dichuyen!=4)
+                check_dichuyen=3
+            if (e.target.id==="left"&&check_dichuyen!=3)
+                check_dichuyen=4
+        })
+    })
 
     batdaudichuyen=setInterval(function(){ 
         for (let i=toado.length-1;i>0;--i){
@@ -125,7 +137,7 @@ function startgame(){
             }
         }
 
-        if (toado[0].x==-10||toado[0].x==500||toado[0].y==-10||toado[0].y==500){
+        if (toado[0].x==-10||toado[0].x==screenOfuser||toado[0].y==-10||toado[0].y==screenOfuser){
             document.getElementById("end").style.display="block"
             xoarancu(toado)
             xoavatthecu()
