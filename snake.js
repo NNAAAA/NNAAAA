@@ -73,7 +73,6 @@ function startgame(){
                 check_dichuyen=3
             if (e.target.id==="left"&&check_dichuyen!=3)
                 check_dichuyen=4
-            console.log(e.target)
         })
     })
 
@@ -90,7 +89,6 @@ function startgame(){
             toado[0].x+=dichuyen.x;
         else if (check_dichuyen==4)
             toado[0].x-=dichuyen.x;
-
         if (toado[0].x==toadovatthe.x&&toado[0].y==toadovatthe.y){
             // tang diem
             point++
@@ -127,7 +125,11 @@ function startgame(){
         }
 
         for (let i=0;i<toadovatcan.length;++i){
-            if (toadovatcan[i].x==toado[0].x&&toadovatcan[i].y==toado[0].y){
+            if (toadovatcan[i].x==toado[0].x&&
+                toadovatcan[i].y==toado[0].y&&
+                toadovatcan[i].x+20==toado[0].y&&
+                toadovatcan[i].y+20==toado[0].y
+            ){
                 document.getElementById("end").style.display="block"
                 xoarancu(toado)
                 xoavatthecu()
@@ -192,6 +194,9 @@ document.addEventListener("keydown",keycode=>{
             if (check_dichuyen!=3)
                 check_dichuyen=4;
             break;
+        case 32: //stop
+            check_dichuyen=5;
+            break;
     }
 });
 
@@ -218,10 +223,19 @@ function xoavatthecu(){
 
 function themvatthe(a,body){
     let vatthe=document.createElement("div");
+    let icon=randomIcon();
+    vatthe.innerHTML=icon
     vatthe.className="vatthe";
     body.appendChild(vatthe);
     vatthe.style.top=`${a.y}px`
     vatthe.style.left=`${a.x}px`
+}
+
+function randomIcon(){
+
+    let arrIcon=['😀','😁','😂','🤣','😃','😄','😅','😆','😉','😊','😋','😎','😍','😘','🥰','😗','😙','😚','🙂','🤗','🤩','🤔','🤨','😐','😑','😶','🙄','😏','😣','😥','😮','🤐','😯','😪','😫','🥱','😴','😌','😛','😜','😝','🤤','😒','😓','😔','😕','🙃','🤑','😲','☹','🙁','😖','😞','😟','😤','😢','😭','😦','😧','😨','😩','🤯','😬','😰','😱','🥵','🥶','😳','🤪','😵','🥴','😠','😡','🤬','😷','🤒','🤕','🤢','🤮','🤧','😇','🥳','🤠','🥺','🤡','🤥','🤫','🤭','🧐','🤓','😈']
+    console.log(arrIcon.length)
+    return arrIcon[Math.floor(Math.random() * ( arrIcon.length))]
 }
 
 

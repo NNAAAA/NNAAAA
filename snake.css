@@ -61,19 +61,16 @@ body{
 .vatthe{
     width: 10px;
     height: 10px;
-
-    background-color: rgb(55, 0, 255);
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+    margin:0;
+    background-color:transparent;
     position: absolute;
-    animation:flicker 3s infinite
 }
 
-@keyframes flicker{
-    0%{opacity: 1;}
-    25%{opacity: 0.75;}
-    50%{opacity: 0.25;}
-    75%{opacity: 0.75;}
-    100%{opacity: 1;}
-}
 
 .vatcan{
     width: 10px;
