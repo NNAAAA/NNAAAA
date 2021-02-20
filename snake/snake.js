@@ -8,7 +8,7 @@ var maxpoint=0;
 //setup khung hinh
 var screenOfuser=0
 
-    screenOfuser=Math.floor(window.innerWidth/100)*100
+    screenOfuser=Math.floor((window.innerWidth<window.innerHeight ? window.innerWidth : window.innerHeight)/100)*100
 
 
 console.log(screenOfuser)
