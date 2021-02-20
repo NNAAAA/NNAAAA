@@ -7,10 +7,11 @@ var point=0;
 var maxpoint=0;
 //setup khung hinh
 var screenOfuser=0
-if (screen.width<=600){
-    screenOfuser=400//Math.floor(screen.width/100)*100
-}
-else screenOfuser=500
+
+    screenOfuser=Math.floor(window.innerWidth/100)*100
+
+
+console.log(screenOfuser)
 var btn=screenOfuser/100*10
 document.getElementById('background').style.width=`${screenOfuser}px`
 document.getElementById('background').style.height=`${screenOfuser}px`
