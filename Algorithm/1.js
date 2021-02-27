@@ -32,7 +32,7 @@ function createArr(){
           // else check=false
           if (currentNumb==queryNumb){
             const newDiv=document.createElement('div')
-            newDiv.innerHTML=`${currentIndex%2==0 ? 'R' : 'L'}:${check_Require}  Index: ${currentIndex}`
+            newDiv.innerHTML=`${currentIndex%2==0 ? 'R' : 'L'}:${check_Require}`
             arrDiv.appendChild(newDiv)
 
             check=false
