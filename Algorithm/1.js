@@ -1,15 +1,16 @@
 var arr=[]
-var numbRequire=[3,5,7]
-let currentIndex=1
+let currentIndex
 let queryNumb
 let currentNumb
-let check=true
+let check
 const btn=document.querySelector('.btn')
 const form=document.querySelector('.form-control')
 const arrDiv=document.querySelector('.arr')
 btn.addEventListener("click",()=>{
   queryNumb=parseInt(form.value)
+  currentIndex=1
   currentNumb=3
+  check=true
   createArr()
   arr=[]
 })
@@ -17,7 +18,7 @@ btn.addEventListener("click",()=>{
 function createArr(){
   // let n=3;
   // while (n<=queryNumb){
-    while (check&&currentIndex<=queryNumb){ 
+    while (check&&currentNumb<=queryNumb){ 
       if (currentNumb%3==0||currentNumb%5==0||currentNumb%7==0){
 
         let check_Require=checkRequire(currentNumb)
@@ -29,9 +30,9 @@ function createArr(){
           //   arrDiv.appendChild(newDiv)
           // }
           // else check=false
-          if (currentIndex==queryNumb){
+          if (currentNumb==queryNumb){
             const newDiv=document.createElement('div')
-            newDiv.innerHTML=`${currentIndex%2==0 ? 'R' : 'L'}:${check_Require}`
+            newDiv.innerHTML=`${currentIndex%2==0 ? 'R' : 'L'}:${check_Require}  Index: ${currentIndex}`
             arrDiv.appendChild(newDiv)
 
             check=false
