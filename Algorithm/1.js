@@ -19,8 +19,6 @@ function createArr(){
   // let n=3;
   // while (n<=queryNumb){
     while (check&&currentNumb<=queryNumb){ 
-      if (currentNumb%3==0||currentNumb%5==0||currentNumb%7==0){
-
         let check_Require=checkRequire(currentNumb)
         if(check_Require.length!=0){
           // clone=[...check_Require]
@@ -41,8 +39,8 @@ function createArr(){
           currentIndex++
           currentNumb+=2    
         }
-      }
-      currentNumb++
+        else
+          currentNumb+=2
     }
 
     if (check){
