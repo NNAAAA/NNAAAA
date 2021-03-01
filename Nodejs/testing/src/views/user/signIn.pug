@@ -1,0 +1,19 @@
+extends ../../views/header
+
+block content 
+  .container.mt-5
+    h1.text-center Sign In
+    <form class="row g-3" method="get" action="/user/me">
+      <div class="">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="example@gmail.com" name="email">
+      </div>
+      <div class="">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4" name="password">
+      </div>
+      
+      <div class="">
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
