@@ -3,7 +3,7 @@
 using namespace std;
 
 
-void createArr(int arrRequire[][30],int &currentIndex,int &length){
+void createArr(int arrRequire[][50],int &currentIndex,int &length){
  	while(currentIndex<=1000){
 		
 	    int *clone=new int[length];
@@ -19,7 +19,7 @@ void createArr(int arrRequire[][30],int &currentIndex,int &length){
 	
 	
 		//chay tu cuoi len
-	    int currentPos=length-1;
+	  int currentPos=length-1;
 		int currentNumb=3;
 	    while(true){	    	
 		    for (int j=length-1;j>=((currentPos>=0) ? currentPos : 0);--j){
@@ -31,34 +31,37 @@ void createArr(int arrRequire[][30],int &currentIndex,int &length){
   					}
 			        currentIndex++; 
 		        }
+						
 		    }
 		    if (clone[0]==7){
 		    	length++;
 			    break;
-			}
+				}
 
 		
-		    currentPos--;
-		    //keo gia tri xuong 
-			for (int j=((currentPos>=0) ? currentPos : 0);j<length;++j){
-			    clone[j]=currentNumb+2;	
-			}
+				currentPos--;
+				//keo gia tri xuong 
+				for (int j=((currentPos>=0) ? currentPos : 0);j<length;++j){
+						clone[j]=currentNumb+2;	
+				}
 			
-			//luu clone vao mang chinh
-			for (int i=0;i<length;++i){
-    			arrRequire[currentIndex][i]=clone[i];
-  			}
-			currentIndex++; 		    		
+				//luu clone vao mang chinh
+				for (int i=0;i<length;++i){
+						arrRequire[currentIndex][i]=clone[i];
+					}
+				currentIndex++; 	  		
     	} 
 		delete [] clone;	
   	}
 }
 
-void printArr(int arrRequire[][30],int currentIndex){
+void printArr(int arrRequire[][50],int currentIndex){
   	for (int i=0;i<currentIndex;++i){
-  		cout<<"index:"<<i<<"=";
+  		cout<<"i:"<<i+1<<"=";
 	    for (int j=0;j<30;++j){
-	        cout<<arrRequire[i][j]<<" ";
+				if (arrRequire[i][j]==0)
+					continue;
+	      cout<<arrRequire[i][j]<<" ";
 	    }
 	    cout<<endl;
   	}
@@ -66,13 +69,13 @@ void printArr(int arrRequire[][30],int currentIndex){
 
 int main()
 {
-  	int arrRequire[10000][30];
-  	int currentIndex=0;
-  	int length=1;
+  int arrRequire[10000][50];
+  int currentIndex=0;
+  int length=1;
 
 	createArr(arrRequire,currentIndex,length);
 	printArr(arrRequire,currentIndex);
   	
-    system("pause");
-    return 0;
+  system("pause");
+  return 0;
 }
