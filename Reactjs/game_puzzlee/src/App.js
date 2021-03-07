@@ -7,17 +7,7 @@ import './App.css'
 function App() {
   return (
     <DataProvider>     
-        <Router>
-          <Switch>
-            <Redirect exact from='/' to='/home'></Redirect>
-            <Route path='/home'>
-              <Home/>
-            </Route>
-            <Route exact path='/start'>
-              <Start/>
-            </Route>
-          </Switch>
-        </Router>
+        <Home />
     </DataProvider>
   );
 }
