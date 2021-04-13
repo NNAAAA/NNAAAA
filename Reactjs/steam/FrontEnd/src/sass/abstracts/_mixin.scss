@@ -1,0 +1,26 @@
+@mixin ContentCenter($direction:row,$justify:center,$align:center,$display:flex){
+    display:$display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    @content;
+}
+
+@mixin Text(
+    $size:1rem,
+    $color:white,
+    $weight:500,
+    $family:'Arial',
+    $align:center,
+    $justify:center,
+    $decoration:none
+){
+    font-size: $size;
+    color:$color;
+    font-weight:$weight;
+    font-family: $family;
+    text-align:$align ;
+    text-justify:$justify;
+    text-decoration:$decoration;
+    @content;
+}

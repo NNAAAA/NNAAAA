@@ -206,11 +206,15 @@ body{
   background:linear-gradient(315deg,#4dff03,#00d0ff);;
 }
 
+
+.custom-5{
+  border-radius: 0;
+}
 .custom-5 svg,
 .custom-5 svg rect{
   width: 100%;
   height: 100%;
-
+  
   position: absolute;
   top: 0;
   left:0;
@@ -219,7 +223,7 @@ body{
 .custom-5 rect{
   stroke:rgba(0, 0, 0);
   stroke-width: 4;
-  transition:2s ease-out;
+  transition:1s ease-out;
   stroke-dasharray: 400;
   stroke-dashoffset: 0;
 }
@@ -227,5 +231,5 @@ body{
   stroke:rgba(255, 255, 255);
   stroke-width: 6;
   stroke-dasharray:400;
-  stroke-dashoffset:800;
+  stroke-dashoffset:1200;
 }

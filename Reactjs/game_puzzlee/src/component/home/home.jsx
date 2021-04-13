@@ -4,17 +4,14 @@ import { useContext } from 'react'
 import { Data } from '../store/store'
 
 import Start from '../start/start'
-import RootPic from '../rootPic/rootPic'
 
 export default function Home(){
-	console.log('home')
   const { 
 		image,
 		activePic,setActivePic,
  	}=useContext(Data)
 
-	 
-	function play(e){
+	function play(){
 		if (activePic) {
 			document.getElementById('background').style.left='-100%'
 		}		
@@ -40,6 +37,7 @@ export default function Home(){
 
   	return (
 			<div id='background'>
+				{/* homepage */}
 				<div id='home' >
 					<h1>Puzzle Game</h1>
 					<h3>Chọn hình</h3>
@@ -62,15 +60,16 @@ export default function Home(){
 						
 						)}
 					</div> 
-					<button id='home__play' onClick={(e)=>play(e)} href='/start'>Chơi</button> 		
+					<button id='home__play' onClick={()=>play()} href='/start'>Chơi</button> 		
 				</div>
 
-				<div id='win'>
+				{/* <div id='win'>
 					Win
-				</div>
+				</div> */}
 
+
+				{/* tool , board , root picture */}
 				<Start/>
-				<RootPic/>
 			</div>
   	)
 }

@@ -1,0 +1,85 @@
+.browse {
+    background:$bg-primary-color;
+    @include ContentCenter($direction:column);
+    &__titles {
+        width: 100%;
+        @include ContentCenter();
+        transform:translateY(-100%);
+        .title {
+            padding: 0.2rem 0.5rem;
+
+            @include ContentCenter();
+            @include Text(0.9rem,$title-color,400);
+
+            transition: 0.5s;
+            cursor: pointer;
+            &.active {
+                background: $bg-primary-color;
+                color: $text-color;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        }
+    }
+    &__content{
+        @include ContentCenter($align:flex-start);
+        &--left{  
+            width:40%;       
+            .title{
+                text-align: end;
+                @include Text(0.9rem,$text-color,$align:end);
+            }
+            .items{
+                
+                .item{
+                    @include ContentCenter($justify:space-between);
+                    &:not(:last-child){
+                        margin-bottom:0.5rem;
+                    }
+                    .info{
+                        padding-left:1%;
+                        &__title{
+                            color:$text-color;
+                        }
+                        &__category{
+                            @include Text(0.8rem);
+                            white-space: nowrap; 
+                            overflow: hidden;
+                            text-overflow: clip; 
+                            opacity:0.4;
+                        }
+                    }
+                    .sale-off{
+                        background:$sale-off-color;
+                        padding:0 0.2rem;
+                        border-radius:2px;
+
+                        @include Text(0.9rem,$sale-off-text-color);
+
+                        cursor: pointer;
+                    }
+                    .price{
+                        &--before{
+                            @include Text(0.7rem,$bg-tertiary-color,$decoration: line-through);  
+                            opacity:0.9;       
+                        }
+                        &--after{
+                            @include Text(0.9rem,$bg-tertiary-color,$weight:600);
+                        }
+                    }
+                }
+            }
+        }
+        &--right{ 
+            width:30%;
+        }
+        p{
+            margin:0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .browse{
+    }
+}

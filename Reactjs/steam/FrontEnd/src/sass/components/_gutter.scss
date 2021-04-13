@@ -1,0 +1,34 @@
+.gutter{
+  &__logo{
+    img{
+      width:200px;
+      image-rendering:crisp-edges;
+    }
+  } 
+  &__block{
+    margin-bottom: 1rem;
+    &__header{
+      @include Text(0.8rem,$text-color,600,$align:left){
+        text-transform:uppercase;
+      }   
+      opacity:0.6;
+    }
+    &__items{
+      .item{
+        @include Text(0.9rem,$gutter-text-color);
+      
+        transition:0.5s;
+        &:hover{
+          color:$text-color;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:1050px){
+  .gutter{
+    display:none;
+  }
+}

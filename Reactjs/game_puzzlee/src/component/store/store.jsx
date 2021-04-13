@@ -7,6 +7,9 @@ import thanhphuong from '../image/thanhphuong.jpg'
 import luffy from '../image/luffy.jpg'
 import sunFlower from '../image/sunFlower.jpg'
 import aurelionSol from '../image/aurelionSol.png'
+import yasuo from '../image/yasuo.jpg'
+import sena from '../image/sena.jpg'
+import huanrose from '../image/huanrose.jpg'
 
 export const Data=createContext()
 
@@ -29,6 +32,15 @@ export function DataProvider({children}){
     },
     {
       url:sunFlower
+    },
+    {
+      url:sena
+    },
+    {
+      url:huanrose
+    },
+    {
+      url:yasuo
     },
   ]
   const screenOfUser=Math.floor(
@@ -75,7 +87,6 @@ export function DataProvider({children}){
         clone.push(i)
       }
 
-
       let i=0,j=0
       while (clone.length!=0){
         let x
@@ -113,9 +124,7 @@ export function DataProvider({children}){
         
         clone=clone.filter(id=>id!=x)
       }
-      // console.log('cloneArr_2',cloneArr)
-      // console.log('clone_2',clone)
-      
+    
 			setPuzzle(cloneArr)
 	},[level])
 

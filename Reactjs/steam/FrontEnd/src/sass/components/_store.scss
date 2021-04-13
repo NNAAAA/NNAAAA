@@ -1,0 +1,37 @@
+.content{
+  overflow: hidden;
+  background:linear-gradient(to bottom,$bg-secondary-color,$bg-primary-color);
+  &__store{
+    padding:3rem 5rem 6rem 5rem;
+
+    @include ContentCenter($align:flex-start);
+    &--left{
+      flex-grow:1;
+    }
+    &--right{
+      flex-grow:8;
+
+      @include ContentCenter($direction:column);
+    }
+  }
+  &__browse{
+  }
+}
+
+@media (max-width: 768px){
+  .content__store{
+    padding:0;
+    padding-bottom:4rem;
+  }
+  .content__store--left{
+    display:none;
+  }
+  .content__store--right{
+    margin-top: 5rem;
+    align-items:center;
+  }
+  .content__browse{
+    padding:0;
+  }
+}
+

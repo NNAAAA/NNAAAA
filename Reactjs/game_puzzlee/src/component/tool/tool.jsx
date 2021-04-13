@@ -14,19 +14,19 @@ export function Tool(){
   const level=[
     {
       label:'Dễ',
-      value:100
+      value:200
     },
     {
       label:'Thường',
-      value:50
+      value:100
     },
     {
       label:'Khó',
-      value:25
+      value:50
     },
     {
       label:'Rất khó',
-      value:10
+      value:25
     }
   ]
 

@@ -1,5 +1,5 @@
 import './start.css'
-import {useContext,useState,useEffect,Component} from 'react'
+import {useContext,useState} from 'react'
 import { Data } from '../store/store'
 import { Tool } from '../tool/tool'
 export default function Start(){
@@ -7,23 +7,23 @@ export default function Start(){
 		screenOfUser,
 		activePic,
 		puzzle,setPuzzle,
-		level,setLevel,
+		level,
 		blank,setBlank
 	}=useContext(Data)
 	
 	const [seePic,setSeePic]=useState(false)
 
 	function move(x,y,col,row){
-		if (x+level==blank.x&&y==blank.y){
+		if (x+level===blank.x&&y===blank.y){
 			swapPos(x,y,col,row)
 		}
-		else if (x-level==blank.x&&y==blank.y){
+		else if (x-level===blank.x&&y===blank.y){
 			swapPos(x,y,col,row)
 		}
-		else if (x==blank.x&&y+level==blank.y){
+		else if (x===blank.x&&y+level===blank.y){
 			swapPos(x,y,col,row)
 		}
-		else if (x==blank.x&&y-level==blank.y){
+		else if (x===blank.x&&y-level===blank.y){
 			
 			swapPos(x,y,col,row)
 		}
@@ -69,7 +69,6 @@ export default function Start(){
 			if (bgPos[0]==x[0]&&bgPos[1]==y[0])
 				count++
 		}
-		console.log(count,Math.floor((screenOfUser*2-level)/level),level,screenOfUser)
 		if (count==Math.floor((screenOfUser*2-level)/level)){
 			// document.getElementById('win').style.bottom='0'
 			// document.getElementById('win').style.left='100%'
@@ -83,9 +82,7 @@ export default function Start(){
 			{/* tool */}
 			<Tool/>
 
-
-
-			{/* gameplay */}
+			{/* board */}
 			<div
 				style={{
 					height:screenOfUser,
@@ -124,6 +121,7 @@ export default function Start(){
 				)}
 			</div>
 
+			{/* root picture */}
 			<div
 				style={{
 					position:'absolute',
@@ -132,11 +130,13 @@ export default function Start(){
 					background:'linear-gradient(315deg,#4dff03,#00d0ff)',
 					zIndex:'-1',
 					backgroundImage:`url("${activePic}")`,
-					backgroundSize:`${screenOfUser}px`,
+					backgroundSize:`${screenOfUser}px ${screenOfUser}px`,
+					backgroundRepeat:`no-repeat`
 				}}
 				id='rootPic'
 			></div>
 
+			{/* btn see root picture */}
 			<button 
 				style={{
 					position:'absolute',
