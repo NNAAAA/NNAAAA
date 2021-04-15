@@ -6,7 +6,7 @@ import Gutter from '../Gutter/gutter'
 import Carousel from '../Carousel/carousel'
 import SpecialGame from '../SpecialGame/specialgame'
 import Browse from '../Browse/browse';
-
+import Footer from '../Footer/footer'
 
 export default function Store() {
   useEffect(() => {
@@ -29,6 +29,8 @@ export default function Store() {
       <div className="content__browse">
         <Browse />
       </div>
+      
+      <Footer/>
     </section>
   )
 }

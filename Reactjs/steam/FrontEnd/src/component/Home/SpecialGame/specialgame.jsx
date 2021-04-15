@@ -72,12 +72,12 @@ export default function SpecialGame() {
                     )}
                 </div>
                 <div
-                    className="special-game__control--left"
+                    className="special-game__control--left special-game__control"
                     onClick={() => setActiveIndex(activeIndex === 0 ? image.length - 1 : activeIndex - 1)}
                 >
                 </div>
                 <div
-                    className="special-game__control--right"
+                    className="special-game__control--right special-game__control"
                     onClick={() => setActiveIndex(activeIndex + 1 === image.length ? 0 : activeIndex + 1)}
                 >
                 </div>

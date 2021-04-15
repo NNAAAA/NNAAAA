@@ -20,26 +20,34 @@ export default function Header() {
 
     return (
         <nav className='header'>
-                <div
-                    className='header__toggle'
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    =
-                    </div>
-                <a className='header__logo' href='/'>
-                    <img src='https://store.cloudflare.steamstatic.com/public/shared/images/responsive/header_logo.png' alt='' />
-                </a>
-                <div
-                    className='header__navbar'
-                    style={{
-                        left: `${isOpen ? 0 : -100}%`,
-                    }}
-                >
-                    <a href='/' className='items'>Store</a>
-                    <a href='' className='items'> Community</a>
-                    <a href='' className='items'> About</a>
-                    <a href='' className='items'> Support</a>
-                </div>        
+            <div
+                className='header__toggle'
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                =
+            </div>
+
+            <a className='header__logo' href='/'>
+                <img src='https://store.cloudflare.steamstatic.com/public/shared/images/responsive/header_logo.png' alt='' />
+            </a>
+
+            <div
+                className='header__navbar'
+                style={{
+                    left: `${isOpen ? 0 : -100}%`,
+                }}
+            >
+                <a href='/' className='items'>Store</a>
+                <a href='' className='items'> Community</a>
+                <a href='' className='items'> About</a>
+                <a href='' className='items'> Support</a>
+            </div>
+
+            <login>
+                <a href='/user/login' className='sign-in sign'>Sign in</a>
+                <div className='separator'>|</div>
+                <a href='/user/register' className='sign-up sign'>Sign up</a>
+            </login>
         </nav>
     )
 }

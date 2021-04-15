@@ -1,10 +1,13 @@
 .special-game {
     width: 100%;
-    height: 500px;
-
-    @include ContentCenter($direction:column)
-
+    height: 45vw;
     margin-top: 3rem;
+
+    @include ContentCenter($direction:column);
+    @include respond(phone){
+        width: 95%;
+        height: 55vw;
+    }
     &__header {
         @include Text($color:$text-color){
             text-transform: uppercase;
@@ -33,7 +36,7 @@
                 }
             }
             &__indicators {
-                @include ContentCenter($justify:space-between)
+                @include ContentCenter($justify:space-between);
 
                 position: absolute;
                 top: 105%;
@@ -56,48 +59,42 @@
                 }
             }
             &__control {
-                &--left{
-                    width: 40px;
-                    height: 100px;
+                width: 40px;
+                height: 100px;
+
+                @include ContentCenter();
+
+                position: absolute;
+                top: 50%;
+
+                opacity: 0.6;
+                cursor: pointer;
+                transition: 0.1s linear;
+
+                @include respond(phone){
+                    display: none;
+                }
+
+                &--left{                  
                     background: linear-gradient(
                         to right, 
                         rgba($carousel-control-color-secondary,0.3) 5%, 
                         rgba($carousel-control-color-primary,0) 95%
-                    );
-
-                    @include ContentCenter
-
-                    position: absolute;
-                    top: 50%;
+                    );          
                     left: 0;
                     transform: translate(-100%, -50%);
-
-                    opacity: 0.6;
-                    cursor: pointer;
-                    transition: 0.1s linear;
                     &:hover {
                         transform: translate(-100%, -50%) scale(1.1);
                     }
                 }
                 &--right{
-                    width: 40px;
-                    height: 100px;
                     background: linear-gradient(
                         to left, 
                         rgba($carousel-control-color-secondary,0.3) 5%, 
                         rgba($carousel-control-color-primary,0) 95%
                     );
-
-                    @include ContentCenter
-
-                    position: absolute;
-                    top: 50%;
                     right: 0;
                     transform: translate(100%, -50%);
-
-                    opacity: 0.6;
-                    cursor: pointer;
-                    transition: 0.1s linear;
                     &:hover {
                         transform: translate(100%, -50%) scale(1.1);
                     }
@@ -107,15 +104,3 @@
     }
 }
 
-@media (max-width:768px) {
-    .special-game {
-        width: 95%;
-        height: 45vw;
-    }
-
-    .special-game__inner .special-game__control--left,
-    .special-game__inner .special-game__control--right {
-        display: none;
-    }
-
-}

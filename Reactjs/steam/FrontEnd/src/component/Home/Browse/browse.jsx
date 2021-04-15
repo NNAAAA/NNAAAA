@@ -147,10 +147,23 @@ export default function Browse() {
       },
     ]
     setGameInfo(Info)
-  }, [])
+  },[])
+
+  const changeActiveItem=(index)=>{
+    const item=document.querySelectorAll('.browse__content--left .item');
+    const detailItem=document.querySelectorAll('.browse__content--right .item');
+    item.forEach((itm,index)=>{
+      itm.classList.remove('active');
+    })
+    detailItem.forEach((detailItm,index)=>{
+      detailItm.classList.remove('active');
+    })
+    detailItem[index].classList.add('active');
+    item[index].classList.add('active');
+  }
 
   const Info = gameInfo.map((info, index) =>
-    <div className='item'>
+    <div className='item' onMouseOver={()=>changeActiveItem(index)}>
       <img src={info.avatar} alt="" />
       <div className='info'>
         <p className='info__title'>{info.name}</p>
@@ -164,11 +177,11 @@ export default function Browse() {
     </div>
   )
 
-  const Image = gameInfo.map((info, index) =>
+  const Detail = gameInfo.map((info, index) =>
     <div className='item'>
       <div className='info'>
-        <p className='item__title'>{info.name}</p>
-        <p className='item__category'>{info.category}</p>
+        <p className='info__title'>{info.name}</p>
+        <p className='info__category'>{info.category}</p>
       </div>
       <div className='images'>
         {info.image.map((url, i) =>
@@ -189,8 +202,8 @@ export default function Browse() {
       <div className='browse__content'>
         <div className='browse__content--left' >
           <div className='title'>
-            See more
-            <a href="" className="see-more"></a>
+            See more:
+            <a href="" className="see-more">abc</a>
           </div>
           <div className='items'>
             {Info}
@@ -198,7 +211,7 @@ export default function Browse() {
         </div>
         <div className='browse__content--right'>
           <div className='preview'>
-            {Image}
+            {Detail}
           </div>
         </div>
       </div>

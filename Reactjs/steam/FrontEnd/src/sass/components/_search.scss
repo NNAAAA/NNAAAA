@@ -1,19 +1,27 @@
 .search {
     width:100%;
-
     background: $search-bg-color;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
 
-    @include ContentCenter($justify:space-between)
+    @include ContentCenter($justify:space-between);
+    @include respond(phone){
+        flex-direction: column;
+    }
+
     &__category {
         display: flex;
+        @include respond(phone){
+            width: 100%;
+            flex-direction: column;
+        }
     }
+
     &__title {      
         padding: 0.5rem 0.5rem;
         border-right: 1px solid $search-border-color;
 
-        @include ContentCenter
-        @include Text(0.8rem,$text-color,400)
+        @include ContentCenter();
+        @include Text(0.8rem,$text-color,400);
         
         opacity: 0.8;
         transition: 0.5s;
@@ -23,10 +31,18 @@
             text-decoration:none;
             color:black;
         }
+        @include respond(phone){
+            justify-content: flex-start;
+            border: none;
+        }
     }
 
-    &__tool {
+    &__tool{
+        @include respond(phone){
+            width:100%;
+        }
     }
+
     &__form {
         width: 100%;
         height: 100%;
@@ -52,30 +68,10 @@
     &__icon {
         height: 100%;
 
-        @include ContentCenter
+        @include ContentCenter();
 
         position: absolute;
         right: 0;
         top: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .search {
-        width:100%;
-
-        flex-direction: column;
-    }
-    .search__category {
-        width: 100%;
-
-        flex-direction: column;
-    }
-    .search__title {
-        justify-content: flex-start;
-        border: none;
-    }
-    .search__tool{
-        width: 100%;
     }
 }

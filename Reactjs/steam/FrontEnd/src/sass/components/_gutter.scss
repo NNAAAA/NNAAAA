@@ -1,4 +1,7 @@
 .gutter{
+  @include respond(tablet){
+    display: none;
+  }
   &__logo{
     img{
       width:200px;
@@ -26,9 +29,3 @@
   }
 }
 
-
-@media (max-width:1050px){
-  .gutter{
-    display:none;
-  }
-}

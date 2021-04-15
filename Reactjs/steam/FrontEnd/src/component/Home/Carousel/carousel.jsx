@@ -46,12 +46,12 @@ export default function Carousel() {
                     )}
                 </div>
                 <div
-                    className='carousel__control--left'
+                    className='carousel__control--left carousel__control'
                     onClick={() => setActiveIndex(activeIndex === 0 ? image.length - 1 : activeIndex - 1)}
                 >
                 </div>
                 <div
-                    className='carousel__control--right'
+                    className='carousel__control--right carousel__control'
                     onClick={() => setActiveIndex(activeIndex + 1 === image.length ? 0 : activeIndex + 1)}
                 >
                 </div>
