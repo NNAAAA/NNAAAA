@@ -7,9 +7,11 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^4.6.0",
+    "help": "^3.0.2",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "reactstrap": "^8.9.0",
     "scrollreveal": "^4.0.9",
@@ -20,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass":"node-sass src/style/main.scss src/style/style.css -w"
+    "sass": "node-sass src/style/main.scss src/style/style.css -w"
   },
   "eslintConfig": {
     "extends": [
