@@ -2,20 +2,19 @@ import { useEffect, useState } from 'react'
 
 export default function Browse() {
   const [gameInfo, setGameInfo] = useState([]);
+  const [activeItem,setActiveItem] = useState(0);
+  const [activeCategory,setActiveCategory] = useState(0);
 
   useEffect(() => {
     var titles = document.querySelectorAll('.title');
-    titles.forEach((title) => title.addEventListener('click', (e) => {
-      titles.forEach(title => {
-        title.classList.remove('active');
-      })
-      e.target.classList.add('active');
-    }))
+    titles.forEach((title,index) => title.addEventListener('click', (e) => {
+      setActiveCategory(index);
+    }))   
   })
 
   useEffect(() => {
     let Info = [
-      {
+      [{
         name: 'Genesis Noir',
         category: 'Noir Exploration Story Rich Point&Click',
         avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
@@ -144,26 +143,406 @@ export default function Browse() {
           `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
           `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
         ],
+      }],
+      [{
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/1048660/capsule_184x69.jpg?t=1618461847`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
       },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      }],
+      [{
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/632300/capsule_184x69.jpg?t=1618288170`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      }],
+      [{
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/1082430/capsule_184x69.jpg?t=1617992940`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      },
+      {
+        name: 'Genesis Noir',
+        category: 'Noir Exploration Story Rich Point&Click',
+        avatar: `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/capsule_184x69.jpg?t=1616783180`,
+        sale: `20%`,
+        price: `160.000`,
+        image: [
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_9ca8e7e14fd65c8d8f2f2b8ec003f6557b8d70c4.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_64fb28b0ff854255515830960002e088bc6a8fca.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_fc952f1f88ddff413c72e126949ebacffd25564d.600x338.jpg`,
+          `https://cdn.cloudflare.steamstatic.com/steam/apps/735290/ss_5b2b30a0db21b9cb27e08ee9a2ec9190693058ad.600x338.jpg`
+        ],
+      }],
     ]
     setGameInfo(Info)
   },[])
 
-  const changeActiveItem=(index)=>{
-    const item=document.querySelectorAll('.browse__content--left .item');
-    const detailItem=document.querySelectorAll('.browse__content--right .item');
-    item.forEach((itm,index)=>{
-      itm.classList.remove('active');
-    })
-    detailItem.forEach((detailItm,index)=>{
-      detailItm.classList.remove('active');
-    })
-    detailItem[index].classList.add('active');
-    item[index].classList.add('active');
-  }
-
-  const Info = gameInfo.map((info, index) =>
-    <div className='item' onMouseOver={()=>changeActiveItem(index)}>
+  const Info = gameInfo[activeCategory]?.map((info, index) =>
+    <div 
+      className={`item ${index===activeItem ? 'active' : ''}`} 
+      onMouseOver={()=>setActiveItem(index)}
+    >
       <img src={info.avatar} alt="" />
       <div className='info'>
         <p className='info__title'>{info.name}</p>
@@ -177,27 +556,26 @@ export default function Browse() {
     </div>
   )
 
-  const Detail = gameInfo.map((info, index) =>
-    <div className='item'>
+  const Detail = gameInfo[activeCategory]?.map((info, index) =>
+    <div className={`item ${index===activeItem ? 'active' : ''}`}>
       <div className='info'>
         <p className='info__title'>{info.name}</p>
         <p className='info__category'>{info.category}</p>
       </div>
       <div className='images'>
-        {info.image.map((url, i) =>
+        {info.image.map(url =>
           <img src={url} alt />
         )}
       </div>
     </div>
   )
-
   return (
     <section className='browse'>
       <div className='browse__titles'>
-        <div className="title active">New and Trending</div>
-        <div className="title">Top Sellers</div>
-        <div className="title">Popular Upcoming</div>
-        <div className="title">Specials</div>
+        <div className={`title ${activeCategory===0 ? 'active' : ''}`}>New and Trending</div>
+        <div className={`title ${activeCategory===1 ? 'active' : ''}`}>Top Sellers</div>
+        <div className={`title ${activeCategory===2 ? 'active' : ''}`}>Popular Upcoming</div>
+        <div className={`title ${activeCategory===3 ? 'active' : ''}`}>Specials</div>
       </div>
       <div className='browse__content'>
         <div className='browse__content--left' >

@@ -5,6 +5,9 @@ import SetGameTwo from './set_2/index'
 import SetGameThree from './set_3/index'
 import SetGameFour from './set_4/index'
 
+import leftArrow from './left-arrow.svg'
+import rightArrow from './right-arrow.svg'
+
 export default function SpecialGame() {
     const [image, setImage] = useState([])
     const [activeIndex, setActiveIndex] = useState(0)
@@ -75,11 +78,13 @@ export default function SpecialGame() {
                     className="special-game__control--left special-game__control"
                     onClick={() => setActiveIndex(activeIndex === 0 ? image.length - 1 : activeIndex - 1)}
                 >
+                    <img src={leftArrow} alt="arrow"/>
                 </div>
                 <div
                     className="special-game__control--right special-game__control"
                     onClick={() => setActiveIndex(activeIndex + 1 === image.length ? 0 : activeIndex + 1)}
                 >
+                    <img src={rightArrow} alt="arrow"/>
                 </div>
             </div>
         </section>

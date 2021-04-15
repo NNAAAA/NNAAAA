@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import leftArrow from './left-arrow.svg'
+import rightArrow from './right-arrow.svg'
 
 export default function Carousel() {
     const [image, setImage] = useState([])
@@ -49,11 +51,13 @@ export default function Carousel() {
                     className='carousel__control--left carousel__control'
                     onClick={() => setActiveIndex(activeIndex === 0 ? image.length - 1 : activeIndex - 1)}
                 >
+                    <img src={leftArrow} alt="arrow"/>
                 </div>
                 <div
                     className='carousel__control--right carousel__control'
                     onClick={() => setActiveIndex(activeIndex + 1 === image.length ? 0 : activeIndex + 1)}
                 >
+                    <img src={rightArrow} alt="arrow"/>
                 </div>
             </div>
         </section>

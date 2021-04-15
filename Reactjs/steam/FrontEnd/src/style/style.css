@@ -101,6 +101,9 @@
       text-justify: center;
       text-decoration: none;
       opacity: 0.7; }
+    @media (max-width: 800px) {
+      .header login {
+        display: none; } }
 
 .search {
   width: 100%;
@@ -168,8 +171,11 @@
     align-items: center;
     flex-direction: row;
     position: absolute;
-    right: 0;
+    right: 0.2rem;
     top: 0; }
+    .search__icon img {
+      padding: 0.1rem;
+      height: 70%; }
 
 @media (max-width: 1200px) {
   .gutter {

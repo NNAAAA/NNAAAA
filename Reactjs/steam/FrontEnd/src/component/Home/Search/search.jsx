@@ -1,3 +1,5 @@
+import loupe from './loupe.svg'
+
 export default function Search() {
   return (
     <search className='search'>
@@ -22,7 +24,7 @@ export default function Search() {
       <div className='search__tool'>
         <form action='' className='search__form'>
           <input className='search__input' type='text' placeholder='search the store' />
-          <span className='search__icon'>O</span>
+          <span className='search__icon'><img src={loupe} alt="loupe"/></span>
         </form>
       </div>
     </search>
