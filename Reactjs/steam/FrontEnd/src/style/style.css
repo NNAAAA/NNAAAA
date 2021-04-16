@@ -101,7 +101,7 @@
       text-justify: center;
       text-decoration: none;
       opacity: 0.7; }
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
       .header login {
         display: none; } }
 
@@ -626,3 +626,32 @@
       .content__store {
         padding: 0;
         padding-bottom: 4rem; } }
+
+.login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #1b2838; }
+  .login .form-input__title {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 500;
+    font-family: "Arial";
+    text-align: center;
+    text-justify: center;
+    text-decoration: none; }
+  .login .form-input .item {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; }
+    .login .form-input .item label {
+      width: 30%;
+      padding: 0 0.5rem;
+      color: #1baddf;
+      font-size: 1rem; }
+    .login .form-input .item input {
+      padding: 0.2rem 0.5rem;
+      outline: 0;
+      border: 0; }

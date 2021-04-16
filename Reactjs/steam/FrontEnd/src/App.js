@@ -6,7 +6,7 @@ import Store from './component/Home/Store/store'
 import Header from './component/Home/Header/header'
 import Login from './component/User/Login/login'
 import Register from './component/User/Register/register'
-
+import Footer from './component/Home/Footer/footer'
 export default function App() {
   return (
     <Router>
@@ -33,7 +33,9 @@ export default function App() {
         <Route exact path='/'>
           <Store/>
         </Route>
-      </Switch>        
+      </Switch>
+
+      <Footer/>        
     </Router>
   );
 }

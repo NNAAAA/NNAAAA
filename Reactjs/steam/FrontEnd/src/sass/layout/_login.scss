@@ -1,0 +1,31 @@
+.login{
+    height:100vh;
+
+    display: flex;
+    justify-content: center;
+    background: $bg-secondary-color;
+
+    .form-input{
+        &__title{
+            @include Text(1.4rem,$text-color);
+        }
+
+        .item{
+            margin-bottom: 0.5rem;
+            @include ContentCenter();
+            label{
+                width:30%;
+                padding:0 0.5rem;
+
+                color:$title-color;
+                font-size: 1rem;
+            }
+            input{
+                padding:0.2rem 0.5rem;
+
+                outline: 0;
+                border: 0;
+            }
+        }
+    }
+}
