@@ -3,7 +3,8 @@
 
     display: flex;
     justify-content: center;
-    background: $bg-secondary-color;
+    background-image:   linear-gradient(to left,rgba($bg-secondary-color,0.5),rgba($bg-tertiary-color,0.3)),               
+                        url('https://store.cloudflare.steamstatic.com/public/shared/images/joinsteam/acct_creation_bg.jpg');
 
     .form-input{
         &__title{
