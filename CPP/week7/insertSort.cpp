@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//abc
+
 void insertionSort(int A[10],int n){
     int temp,j;
     for (int i=1;i<n;++i){
