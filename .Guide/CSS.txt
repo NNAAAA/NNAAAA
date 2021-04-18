@@ -1,0 +1,77 @@
+- 3 mau dep:
+	background:linear-gradient(45deg,#ffbc00,#ff0058);
+	background:linear-gradient(315deg,#03a9f4,#ff0058);
+	background:linear-gradient(315deg,#4dff03,#00d0ff);
+
+- dao nguoc :
+	-webkit-box-reflect:below -28px linear-gradient(transparent,#0002);
+
+- blur effect:
+	backdrop-filter:blur(15px)
+
+-layer:	
+	box-shadow: 0px 1px 1px rgb(0, 0, 0,0.2),
+      0px 8px 0px -3px #fff,
+      0px 10px 1px -3px rgb(0, 0, 0,0.2),
+      0px 17px 0px -6px #fff,
+      0px 18px 1px -6px rgb(0, 0, 0,0.2);
+
+-icon tu thiet ke :
+	https://codepen.io/evondev/details/baoGjP
+	https://codepen.io/ykadosh/full/ExNOmZx?fbclid=IwAR0iKd0kcg8rV7q0mmp0UPCtCLlc7xDLeel5sxuDvuyX_D0qSKu66TftFTw
+	https://a.singlediv.com/?fbclid=IwAR2z1SRPcv2YaJ3SznhxY93Cfd-gx0pwWwewCv8hD8IsSmS-FLWlR3CdcDs
+	https://css-tricks.com/drawing-images-with-css-gradients/?fbclid=IwAR0xbn_UofWY8qJ6iWzRArPiaEyQcTkf1-aHiJ2SssTDph6XFbXuO9TCQUI
+
+-R TM:logo
+sup,
+sub {
+height: 0;
+line-height: 1;
+vertical-align: baseline;
+_vertical-align: bottom;
+position: relative;
+}
+sup {
+bottom: 1ex;
+}
+sub {
+top: .5ex;
+}
+hoac dung the sub va sup trong html
+
+-scroll:https://scrollrevealjs.org/?fbclid=IwAR3rsUYioHCzR5kD9kPjrVoGK8kx7yfYnQXASZ8RX5PeIwvsnkdFpWtiJnc
+
+-3d effect:
+	transform-style:perspective();
+	perspective:1000rem;
+	backface-visibility:hidden;
+
+-tron mau:
+	background-blend-mode:screen;
+	mix-blend-mode:screen;
+
+-password-input:
+	-webkit-text-security: square;
+
+-xuong dong:
+	-webkit-box-decoration-break:clone;
+
+-lam cong hinh chu nhat:
+	clip-path:ellipse(80% 70% at 50% 30%)
+
+-text bo vong tron quanh shape:
+	clip-path:circle(50% at 50% 50%);
+	shape-outside:circle(50% at 50% 50%);
+
+-framework: 
+	https://viblo.asia/p/cac-css-framework-doc-dao-ma-co-the-ban-chua-biet-XL6lAd3mZek
+	
+-danh so thu tu:
+	counter-reset: headings;
+	counter-increment: headings;
+	::before{
+		content:counter(headings)
+	}
+
+-onclick trong css:
+	button:focus-within
