@@ -1,11 +1,11 @@
 import ScrollReveal from 'scrollreveal'
 import { useEffect } from 'react'
 
-import Search from '../Search/search'
-import Gutter from '../Gutter/gutter'
-import Carousel from '../Carousel/carousel'
-import SpecialGame from '../SpecialGame/specialgame'
-import Browse from '../Browse/browse';
+import Search from './Search/search'
+import Gutter from './Gutter/gutter'
+import Carousel from './Carousel/carousel'
+import SpecialGame from './SpecialGame/specialgame'
+import Browse from './Browse/browse';
 
 export default function Store() {
   useEffect(() => {
