@@ -51,14 +51,18 @@ $icon-color:(
         img{
             height:30px;
             margin:auto;
+            @include respond(phone){
+                height:5vw;
+            }
         }
         div{
             color:$text-color;
-            font-size:0.9rem;
+            font-size:1rem;
             font-weight: 400;
             padding:0 2rem;
             opacity: 0.8;
             @include respond(phone){
+                font-size:3vw;
                 padding:0.5rem 0;
             }
         }

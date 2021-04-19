@@ -18,18 +18,21 @@
   }
 
   &__toggle {
-    width: 4rem;
-    height: 4rem;
+    width: 2rem;
+    height: 2rem;
 
     @include ContentCenter($display:none);
     @include Text(4rem,$text-color);
   
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 1rem;
+    top: 1rem;
     z-index: 20;
 
     cursor: pointer;
+    img{
+      width:100%;
+    }
     @include respond(phone){
       @include ContentCenter($display:flex);
     }

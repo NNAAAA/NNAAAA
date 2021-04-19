@@ -1,5 +1,7 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
+
+import menu from './menu.svg';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +26,7 @@ export default function Header() {
                 className='header__toggle'
                 onClick={() => setIsOpen(!isOpen)}
             >
-                =
+                <img src={menu} alt='menu'/>
             </div>
 
             <a className='header__logo' href='/'>
