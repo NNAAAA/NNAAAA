@@ -27,7 +27,7 @@ void addAtEnd(node *&head,int x){
         temp->data=x;
         head->next=temp; 
     }
-    return addAtEnd(head->next,x);asjkjkiiui
+    return addAtEnd(head->next,x);
 }
 
 int main()

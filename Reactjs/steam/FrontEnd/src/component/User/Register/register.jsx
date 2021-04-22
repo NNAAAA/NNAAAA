@@ -3,23 +3,12 @@ import { useState } from 'react'
 export default function Register(){
     const [userInfo,setUserInfo]=useState()
     const createUser=(e)=>{
-        // e.preventDefault();
-        // const account=document.getElementById("account")
-        // axios.post('/user/register',{
-        //     account:'account',
-        //     password:'pw',
-        //     name:'name',
-        //     date:'abc',
-        //     country:'vn'
-        // })
-        // .then(function (response) {
-        //     console.log(response.data);
-        // })
+        e.preventDefault();   
     }
 
     return(
         <section className='register'>
-            <form className='form-input' method='post' action='/user/register'>
+            <form className='form-input' method='POST' action='/user/register'>
                 <div className='form-input__title'>
                     sign up
                 </div>
@@ -49,7 +38,7 @@ export default function Register(){
                         </select>
                     </div>
                 </div>
-                <button onClick={(e)=>createUser(e)} className='btn-custom custom-1 btn-submit'>
+                <button onClick={()=>createUser()} className='btn-custom custom-1 btn-submit'>
                     Sign Up
                 </button>
             </form>

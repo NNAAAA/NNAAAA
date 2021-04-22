@@ -2,16 +2,17 @@
 using namespace std;
 
 void insertionSort(int A[10],int n){
-    int temp,j;
-    for (int i=1;i<n;++i){
+    int j,temp;
+    for (int i = 1; i < n; i++)
+    {
         temp=A[i];
         j=i-1;
-        while (A[j]>temp&&j>=0){
+        while(j>=0&&A[j]>temp){
             A[j+1]=A[j];
             j--;
         }
         A[j+1]=temp;
-    }
+    }   
 }
 
 

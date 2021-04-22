@@ -5,7 +5,7 @@ void selectionSort(int a[],int n){
     for (int i=0;i<n-1;++i){
         int min=i;
         for (int j=i+1;j<n;++j){
-            if (a[j]<a[min])
+            if (a[min]>a[j])
                 min=j;
         }
         if (min!=i){
@@ -13,7 +13,7 @@ void selectionSort(int a[],int n){
             a[min]=a[i];
             a[i]=temp;
         }
-    }    
+    }  
 }
 
 int main()
@@ -22,8 +22,7 @@ int main()
     selectionSort(a,5);
     for (int i=0;i<5;++i){
         cout<<a[i]<<" ";
-    }
-    
+    }  
     system("pause");
     return 0;
 }

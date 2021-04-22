@@ -543,7 +543,17 @@ export default function Browse() {
       className={`item ${index===activeItem ? 'active' : ''}`} 
       onMouseOver={()=>setActiveItem(index)}
     >
-      <img src={info.avatar} alt="" />
+      <div
+        className='image'
+        style={{         
+          backgroundImage:`url('${info.avatar}')`,
+          backgroundPosition: `center center`,
+          backgroundSize:`${index===activeItem ? 'cover' : 'cover'}`,
+          backgroundRepeat:`no-repeat`,
+          transition:`0.5s ease-in-out`
+        }}
+      />   
+
       <div className='info'>
         <p className='info__title'>{info.name}</p>
         <p className='info__category'>{info.category}</p>

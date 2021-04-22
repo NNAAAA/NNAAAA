@@ -37,12 +37,15 @@
             .items{               
                 .item{
                     background: $bg-secondary-color; 
+                    width:100%;
+                    height:inherit;
                     @include ContentCenter($justify:space-between);
                     &:not(:last-child){
                         margin-bottom:0.5rem;
                     }
-                    img{
+                    .image{
                         width:35%;
+                        height:5vw;
                     }
                     .info{
                         margin:0.3rem 1rem;
@@ -50,6 +53,7 @@
                         &__title{
                             color:$text-color;
                             white-space: nowrap; 
+                            transition:0.3s;
                         }
                         &__category{
                             @include Text(0.8rem);
@@ -80,7 +84,7 @@
                 .item.active{
                     background: $bg-tertiary-color;
                     margin-right: -1rem;
-                    padding-right: 1rem;
+                    padding-right: -1rem;
                     .price{
                         &--before,&--after{
                             color:$browser-text-color;
