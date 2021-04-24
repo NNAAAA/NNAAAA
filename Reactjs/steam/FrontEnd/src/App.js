@@ -6,6 +6,7 @@ import Home from './component/Home/home'
 import Header from './component/Home/Header/header'
 import Login from './component/User/Login/login'
 import Register from './component/User/Register/register'
+import Cart from './component/User/Cart/cart'
 import Footer from './component/Home/Footer/footer'
 export default function App() {
   return (
@@ -27,6 +28,10 @@ export default function App() {
         <Route path='/user/register'>
           <Register/>
         </Route> 
+
+        <Route path='/user/cart'>
+          <Cart/>
+        </Route>
       </Switch>
 
       <Footer/>        

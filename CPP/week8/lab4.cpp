@@ -66,7 +66,7 @@ int fibo(int x){
 
 int main()
 {
-    cout<<fibo(-1);
+    cout<<binaryValue(5);
     system("pause");
     return 0;
 }
