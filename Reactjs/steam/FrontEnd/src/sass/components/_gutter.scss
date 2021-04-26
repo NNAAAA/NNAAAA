@@ -2,6 +2,7 @@
   @include respond(tablet){
     display: none;
   }
+  animation:leftToRight 0.4s ease-in-out;
   &__logo{
     img{
       width:200px;

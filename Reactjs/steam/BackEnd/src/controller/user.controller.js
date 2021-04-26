@@ -1,11 +1,10 @@
-const express=require('express')
 const User= require('../models/user')
 class UserController{
     //[POST]  /user/register
     postRegister(req, res, next){
-        const user=new User(req.body)
+        const Users=new User(req.body)
         console.log(req.body)
-    	user.save()
+    	Users.save()
         res.redirect('/user/login')
     }
 }

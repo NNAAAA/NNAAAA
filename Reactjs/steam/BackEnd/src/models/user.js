@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
-const UserSchema = new Schema({
+const User = new Schema({
     account: {
         type: String
     },
@@ -19,6 +19,6 @@ const UserSchema = new Schema({
         type: String
     }
 },{
-    versionKey: false // You should be aware of the outcome after set to false
+    versionKey: false 
 });
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model('Users', User)

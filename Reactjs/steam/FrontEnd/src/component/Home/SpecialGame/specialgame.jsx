@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState} from 'react'
 
+import DataConsumer from '../../../data/data'
 import SetGameOne from './set_1/index'
 import SetGameTwo from './set_2/index'
 import SetGameThree from './set_3/index'
@@ -11,14 +12,13 @@ import rightArrow from './right-arrow.svg'
 export default function SpecialGame() {
     const [image, setImage] = useState([])
     const [activeIndex, setActiveIndex] = useState(0)
-
     useEffect(() => {
         let img = [
             [
-                'https://cdn.cloudflare.steamstatic.com/steam/spotlights/e868f365438daca1d604c8ca/spotlight_image_english.jpg?t=1615852957',
-                'https://cdn.cloudflare.steamstatic.com/steam/spotlights/b7d5204751898f6aadb1390d/spotlight_image_english.jpg?t=1615860453',
-                'https://cdn.cloudflare.steamstatic.com/steam/apps/359550/header.jpg?t=1615927620',
-                'https://cdn.cloudflare.steamstatic.com/steam/apps/812140/header.jpg?t=1602601042'
+                'https://cdn.cloudflare.steamstatic.com/steam/apps/1366540/header.jpg?t=1618986784',
+                'https://cdn.cloudflare.steamstatic.com/steam/apps/1238840/header.jpg?t=1615894782',
+                'https://cdn.cloudflare.steamstatic.com/steam/apps/1121560/header.jpg?t=1617195385',
+                'https://cdn.cloudflare.steamstatic.com/steam/apps/815370/header.jpg?t=1616701574'
             ],
             [
                 'https://cdn.cloudflare.steamstatic.com/steam/apps/359550/ss_79af6b4e7ea15b745c0c315e4ae8f7450bb64f58.600x338.jpg',
@@ -27,16 +27,16 @@ export default function SpecialGame() {
                 'https://cdn.cloudflare.steamstatic.com/steam/apps/1282730/ss_d6cf090e7c644756cc66443c0740f5497e6afbba.600x338.jpg',
             ],
             [
+                'https://cdn.cloudflare.steamstatic.com/steam/spotlights/b8707ca83e76d6a0fd797ffd/spotlight_image_english.jpg?t=1619023017',
+                'https://cdn.cloudflare.steamstatic.com/steam/apps/278080/header.jpg?t=1569989801',
+                'https://cdn.cloudflare.steamstatic.com/steam/apps/513710/header.jpg?t=1617211816',
+                'https://cdn.cloudflare.steamstatic.com/steam/apps/513710/header.jpg?t=1617211816'
+            ],
+            [
                 'https://cdn.cloudflare.steamstatic.com/steam/spotlights/e868f365438daca1d604c8ca/spotlight_image_english.jpg?t=1615852957',
                 'https://cdn.cloudflare.steamstatic.com/steam/spotlights/b7d5204751898f6aadb1390d/spotlight_image_english.jpg?t=1615860453',
                 'https://cdn.cloudflare.steamstatic.com/steam/apps/359550/header.jpg?t=1615927620',
                 'https://cdn.cloudflare.steamstatic.com/steam/apps/812140/header.jpg?t=1602601042'
-            ],
-            [
-                'https://cdn.cloudflare.steamstatic.com/steam/apps/359550/ss_79af6b4e7ea15b745c0c315e4ae8f7450bb64f58.600x338.jpg',
-                'https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/ss_2034e0261ba7313a2eaa78edafed1182f2eb48cc.600x338.jpg',
-                'https://cdn.cloudflare.steamstatic.com/steam/apps/892970/ss_e783457b53702b76249835ac1b4c051211b92d69.600x338.jpg',
-                'https://cdn.cloudflare.steamstatic.com/steam/apps/1282730/ss_d6cf090e7c644756cc66443c0740f5497e6afbba.600x338.jpg',
             ],
         ]
         setImage(img)

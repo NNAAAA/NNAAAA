@@ -8,10 +8,10 @@ export default function Carousel() {
 
     useEffect(() => {
         let img = [
-            'https://cdn.cloudflare.steamstatic.com/steam/apps/359550/ss_79af6b4e7ea15b745c0c315e4ae8f7450bb64f58.600x338.jpg',
-            'https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/ss_2034e0261ba7313a2eaa78edafed1182f2eb48cc.600x338.jpg',
-            'https://cdn.cloudflare.steamstatic.com/steam/apps/892970/ss_e783457b53702b76249835ac1b4c051211b92d69.600x338.jpg',
-            'https://cdn.cloudflare.steamstatic.com/steam/apps/1282730/ss_d6cf090e7c644756cc66443c0740f5497e6afbba.600x338.jpg',
+            'https://cdn.cloudflare.steamstatic.com/steam/apps/1366540/header.jpg?t=1618986784',
+            'https://cdn.cloudflare.steamstatic.com/steam/apps/892970/ss_31c19dc3adf3de8c982f58181c207fa619a15d97.600x338.jpg',
+            'https://cdn.cloudflare.steamstatic.com/steam/apps/1113560/ss_b7867dae1f1fa62a2cc82165c8c79eb6821782d6.600x338.jpg',
+            'https://cdn.cloudflare.steamstatic.com/steam/apps/680420/ss_c0ea37459f5e3c754f21d42d6bf375dfbdd075de.600x338.jpg',
             'https://cdn.cloudflare.steamstatic.com/steam/apps/552520/ss_c6f08b3d2e156f705205f882504d3cd96f78cca1.600x338.jpg'
         ]
         setImage(img)
