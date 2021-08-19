@@ -1,4 +1,0 @@
-Nguyen Van A,3,6,9
-Tran Teo,4,4,2
-Tony Stark,10,10,10
-Son Tung MTP,5,5,5
