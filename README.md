@@ -1,7 +1,5 @@
 Hi , I'm Nguyen Anh 👋
 
-◾ 🌱 I’m currently learning Javascript and MERN stack
-
 ◾ 🎻 I interested in listening music and playing guitar
 
 ◾ 🎮 Playing game is also my hobby
