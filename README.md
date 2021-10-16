@@ -13,7 +13,7 @@
 
 <br>
 
-```
+```json
 {
   "name": "Nguyen Anh",
   "age": 20
