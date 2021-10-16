@@ -1,4 +1,4 @@
-## Hi , I'm Anh 👋
+## Hi, let know more about me  👋
 
 - 🎻 I interested in listening music and playing guitar
 
