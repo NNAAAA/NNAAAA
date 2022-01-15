@@ -18,7 +18,7 @@
 }
 ```
 
-> This is my giant projects
+> My giant projects
 > <br>
 > [Facebook](https://nnaaaa.github.io/facebookClient/#/)
 
