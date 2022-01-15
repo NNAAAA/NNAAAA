@@ -8,20 +8,18 @@
 [Facebook](https://www.facebook.com/nngguuen.anh) 
 [Email](nngguyen.anh@gmail.com) 
 
-- ⚡ Fun fact: The more you hungry , the more you eat .
-                The more you eat , the more you full
 
 <br>
 
 ```json
 {
   "name": "Nguyen Anh",
-  "age": 20
+  "birthYear": 2002
 }
 ```
 
-> This is my projects
+> This is my giant projects
 > <br>
-> [Facebook-Desktop](https://nnaaaa.github.io/facebookDesktop/#/home)
+> [Facebook](https://nnaaaa.github.io/facebookClient/#/)
 
 
