@@ -8,7 +8,7 @@
 [Facebook](https://www.facebook.com/nngguuen.anh) 
 [Email](nngguyen.anh@gmail.com) 
 
-> I am building a social network based on facebook, you can take a view on resource [here](https://github.com/nnaaaa/facebookClient) or participate in my social [here](https://nnaaaa.github.io/facebookClient/#/)
+> I am building a social network based on facebook, you can take a view on resource [here](https://github.com/nnaaaa/EUN) or participate in my social [here](https://nnaaaa.github.io/EUN/#/)
 > <br>
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
