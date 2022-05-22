@@ -1,4 +1,4 @@
-## Hi, let know more about me  👋
+## Hi, let know more about me  
 
 - 🎻 I interested in listening music and playing guitar
 
