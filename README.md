@@ -2,7 +2,13 @@
 [Facebook](https://www.facebook.com/nngguuen.anh) 
 [Email](nngguyen.anh@gmail.com) 
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
+
+![](https://raw.githubusercontent.com/username/github-stats/master/generated/overview.svg#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/username/github-stats/master/generated/overview.svg#gh-light-mode-only)
+
+![](https://raw.githubusercontent.com/username/github-stats/master/generated/languages.svg#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/username/github-stats/master/generated/languages.svg#gh-light-mode-only)
+
 
 ### 💖 Views and Followers
 <a href="https://github.com/Meghna-DAS/github-profile-views-counter">
